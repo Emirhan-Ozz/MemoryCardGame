@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Memory Card Game</h1>
+
+    <div class="admin-panel">
+        <h2>Admin Paneli</h2>
+
+        <label>Kart Çifti Sayısı:</label>
+        <select id="pairCount">
+            <option value="6">6 Çift</option>
+            <option value="8">8 Çift</option>
+            <option value="12">12 Çift</option>
+            <option value="18" selected>18 Çift</option>
+        </select>
+
+        <label>Hamle Limiti:</label>
+        <input type="number" id="moveLimit" value="90">
+
+        <label>Kaç Yanlışta Karıştırılsın:</label>
+        <input type="number" id="shuffleLimit" value="10">
+
+        <button id="applySettingsBtn">Ayarları Uygula</button>
+    </div>
+
+    <div class="info">
+        <p>Hamle: <span id="moves">0</span></p>
+        <p>Süre: <span id="time">0</span> sn</p>
+        <p>En İyi Skor: <span id="bestScore">Yok</span></p>
+        <button id="restartBtn">Yeniden Başlat</button>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <p id="message"></p>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
